@@ -5,7 +5,6 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     
     return {
-        // PERBAIKAN 1: Menambahkan base: './' untuk mengatasi error 404 asset di Vercel
         base: './', 
 
         server: {
@@ -14,7 +13,5 @@ export default defineConfig(({ mode }) => {
         },
         
         plugins: [react()],
-        
-        // CATATAN: Bagian 'define' dan 'resolve' yang bermasalah sudah dihapus
     };
 });
