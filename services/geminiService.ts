@@ -13,7 +13,7 @@ const fileToGenerativePart = async (file: File): Promise<Part> => {
   };
 };
 
-const getAiClient = () => new GoogleGenAI({ apiKey: process.env.API_KEY });
+const getAiClient = () => new GoogleGenAI({ apiKey: import.meta.env.VITE_GOOGLE_API_KEY });
 
 // Helper function untuk delay
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
